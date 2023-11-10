@@ -3,17 +3,13 @@ import { sanityClient, urlFor } from "../lib/sanity";
 import Link from "next/link";
 
 async function getData() {
- try {
-  const query = "*[_type == 'heroImage'][0]";
-
-  const data = await sanityClient.fetch(query);
-
-  return data;
- } catch (error) {
-  console.log(error);
- 
-  
- }
+  try {
+    const query = "*[_type == 'heroImage'][0]";
+    const data = await sanityClient.fetch(query);
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
 }
 
 export default async function Hero() {
@@ -23,7 +19,7 @@ export default async function Hero() {
       <div className="mb-8 flex flex-wrap justify-between md:mb-16">
         <div className="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
           <h1 className="mb-4 text-4xl font-bold text-black sm:text-5xl md:mb-8 md:text-6xl">
-            Top Fashion for a top price!
+          Discover Fashion Excellence with GeRich.
           </h1>
           <p className="max-w-md leading-relaxed text-gray-500 xl:text-lg">
             We sell only the most exclusive and high quality products for you.
