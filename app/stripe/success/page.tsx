@@ -12,7 +12,7 @@ export default function stripeSuccess() {
             Payment Done!
           </h3>
           <p className="text-gray-600 my-2">
-            Thank you for you pruchase We hope you enjoy it
+            Thank you for your purchase We hope you enjoy it
           </p>
           <p>Have a great day!</p>
 
